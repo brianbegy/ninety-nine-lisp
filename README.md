@@ -1,22 +1,11 @@
-# ninety-nine-lisp
+# What is it?
 
-A Clojure library designed to ... well, that part is up to you.
+[99 Lisp Problems](https://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html) implemented in clojure.
 
-## Usage
+# But why?
 
-FIXME
+This repo is me trying to knock some of the rust off after having not written clojure for 2 years.
 
-## License
+# This isn't very professionally organized, is it?
 
-Copyright © 2020 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+No. I'm doing all the work in master, I'm not documenting stuff, and I'm just doing the tests I need to to verify my solutions. Them's the breaks with personal weekend projects.
