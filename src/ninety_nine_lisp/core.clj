@@ -16,5 +16,14 @@
 (defn p05 "reverse a list." [my-list]
   (reduce conj '() my-list)
 )
-  
-  
+
+(defn p06 "is palindrome." [sample]
+  (cond 
+  (= 1 (count sample)) true
+  (= 2 (count sample)) (= (first sample)(last sample))
+  :else
+  (if (= (first sample)(last sample)) 
+    (p06 (drop-last (rest sample)))
+    false)
+  ))
+    

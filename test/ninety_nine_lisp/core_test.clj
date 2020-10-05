@@ -19,5 +19,14 @@
     (is  (= (p04  '("a" "b" "c" "d" "e")) 5))))
 
 (deftest p05-test-01
-  (testing "gets reversed "
+  (testing "gets reversed"
     (is  (= (p05  '("a" "b" "c" "d" "e")) '("e" "d" "c" "b" "a")))))
+
+(deftest p06-test-01
+  (testing "is palindrome"
+  (are [result input] (= result (p06 input))
+     true  "abbba"
+     true  "abbbbba"
+     false  "abbbaa"
+     false  "derabbba"
+    )))
