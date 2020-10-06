@@ -26,9 +26,17 @@
     (p06 (drop-last (rest sample)))
     false)
   ))
-    
+
+(defn flatten-element [ele]
+  (if(seq? ele)
+    (mapcat flatten-element  ele)
+    (list ele))
+)
+
 (defn p07 "flatten list." [sample]
   ; the easy way
-  (flatten sample)
+  ;(flatten sample)
+  ; a harder way
+  (reduce conj (flatten-element sample) [])
   )
     
