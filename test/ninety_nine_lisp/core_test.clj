@@ -30,3 +30,9 @@
      false  "abbbaa"
      false  "derabbba"
     )))
+
+(deftest p07-test-01
+  (testing "flatten"
+  (are [result input] (= result (p07 '("a" ("b" ("c" "d") "e")))))
+     true  '("a" "b" "c" "d" "e")
+    ))

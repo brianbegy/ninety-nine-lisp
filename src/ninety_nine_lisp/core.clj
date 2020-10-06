@@ -27,3 +27,8 @@
     false)
   ))
     
+(defn p07 "flatten list." [sample]
+  ; the easy way
+  (flatten sample)
+  )
+    
