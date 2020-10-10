@@ -24,15 +24,19 @@
 
 (deftest p06-test-01
   (testing "is palindrome"
-  (are [result input] (= result (p06 input))
-     true  "abbba"
-     true  "abbbbba"
-     false  "abbbaa"
-     false  "derabbba"
-    )))
+    (are [result input] (= result (p06 input))
+      true  "abbba"
+      true  "abbbbba"
+      false  "abbbaa"
+      false  "derabbba")))
 
 (deftest p07-test-01
   (testing "flatten"
-  (are [result input] (= result (p07 '("a" ("b" ("c" "d") "e")))))
-     true  '("a" "b" "c" "d" "e")
-    ))
+    (are [result input] (= result (p07 input))
+      '("a" "b" "c" "d" "e") '("a" ("b" ("c" "d") "e")))))
+
+(deftest p08-test-01
+  (testing "remove consecutive dupes"
+    (are [result input] (= result (p08 input))
+      '(1 2 3) '(1 1 2 2 3)
+      '(1 2 3 1) '(1 1 1 1 1 1 1 1 2 2 3 1))))

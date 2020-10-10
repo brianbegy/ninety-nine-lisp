@@ -14,29 +14,34 @@
   (count my-list))
 
 (defn p05 "reverse a list." [my-list]
-  (reduce conj '() my-list)
-)
+  (reduce conj '() my-list))
 
-(defn p06 "is palindrome." [sample]
-  (cond 
-  (= 1 (count sample)) true
-  (= 2 (count sample)) (= (first sample)(last sample))
-  :else
-  (if (= (first sample)(last sample)) 
-    (p06 (drop-last (rest sample)))
-    false)
-  ))
+(defn p06 "is palindrome." [input]
+  (cond
+    (= 1 (count input)) true
+    (= 2 (count input)) (= (first input) (last input))
+    :else
+    (if (= (first input) (last input))
+      (p06 (drop-last (rest input)))
+      false)))
 
 (defn flatten-element [ele]
-  (if(seq? ele)
+  (if (seq? ele)
     (mapcat flatten-element  ele)
-    (list ele))
-)
+    (list ele)))
 
-(defn p07 "flatten list." [sample]
+(defn p07 "flatten list." [input]
   ; the easy way
-  ;(flatten sample)
+  ;(flatten input)
   ; a harder way
-  (reduce conj (flatten-element sample) [])
-  )
-    
+  (reduce conj (flatten-element input) []))
+
+(defn append-if-not-duplicate
+  "if value != (last coll) append and return, otherwise return coll"
+  [coll, value]
+  (if (not= (last coll) value)
+    (conj coll value)
+    coll))
+
+(defn p08 "eliminate consecutive duplicates" [input]
+  (reduce append-if-not-duplicate [] input))
